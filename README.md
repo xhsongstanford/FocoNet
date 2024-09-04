@@ -4,9 +4,10 @@
 # FocoNet
 
 This is a transformer-based neural network to solve for the focal mechanism by combining the first-motion polarities, S/P amplitude ratios, SNRs from a set of stations.
+
 Code will be uploaded after we publish a peer-reviewed paper.
 
-FocoNet structure and the workflow to deterine a focal mechanism:
+## FocoNet structure and the workflow to deterine a focal mechanism:
 
 ![FOCONETnew](https://github.com/user-attachments/assets/7352ab60-b35c-457b-bed9-865eefe86188)
 
