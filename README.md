@@ -12,6 +12,7 @@ This is a transformer-based neural network to solve for the focal mechanism by c
 * numpy
 * pytorch
 * pyrocko
+* obspy
 
 Training requires cuda environment
 
@@ -19,16 +20,16 @@ Training requires cuda environment
 
 1. Download the Training set and Test set:
 
-
+   https://zenodo.org/records/16938136?preview=1
    
-2. Copy the Training and Test sets to the following paths:
+3. Copy the Training and Test sets to the following paths:
 
     ```
     FocoNet/Train/Train_set.npy
     FocoNet/Test/Test_set.npy
     ```
 
-3. Confirm training parameters
+4. Confirm training parameters
 
     Open file
     ```
@@ -45,9 +46,9 @@ Training requires cuda environment
 
 ## Evaluate FocoNet (Make Predictions)
 
-1. Download the model checkpoints:
+1. Download the model files:
 
-2. Copy checkpoint the following path:
+2. Copy model file to the following path:
 
     ```
     FocoNet/model/FocoNet_ckpt.pth
