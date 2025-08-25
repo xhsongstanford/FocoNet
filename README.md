@@ -31,13 +31,12 @@ To create a conda environment, follow the commands below:
 
 ```
 conda create -n foconet python=3.12
+conda activate foconet
 
 pip3 install numpy==1.26
 pip3 install torch
 pip3 install pyrocko
 pip3 install obspy
-
-conda activate foconet
 ```
 
 ## Train FocoNet
