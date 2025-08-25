@@ -22,6 +22,7 @@ They are trained and tested on the same datasets.
 
 * numpy < 2
 * pytorch
+* sklearn
 * pyrocko
 * obspy
 
@@ -35,6 +36,7 @@ conda activate foconet
 
 pip3 install numpy==1.26
 pip3 install torch
+pip3 install scikit-learn
 pip3 install pyrocko
 pip3 install obspy
 ```
