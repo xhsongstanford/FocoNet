@@ -47,7 +47,7 @@ Please note that the training procedure is only tested successful on a linux (ub
 
 1. Download the Training set and Test set:
 
-    https://zenodo.org/records/16938136?preview=1
+    https://zenodo.org/records/16938136
    
 3. Copy the Training and Test sets to the following paths:
 
@@ -85,7 +85,7 @@ The evaluation procedure is tested successful on both linux and macOS systems.
 
 2. Download the Evaluation sets:
 
-    https://zenodo.org/records/16938136?preview=1
+    https://zenodo.org/records/16938136
 
 3. Put the Evaluation sets under the following path, and here we list all of our Evaluation sets in our paper:
 
