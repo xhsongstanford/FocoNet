@@ -50,7 +50,7 @@ class Solver(object):
 
         #self.optimizer = torch.optim.SGD(self.FocoNet.parameters(), lr=config.LR, weight_decay=1e-6, momentum=0.9, nesterov=True)
         self.optimizer = torch.optim.Adam(self.FocoNet.parameters(), lr=config.LR, betas = (0.9, 0.999), weight_decay=1e-6)
-        self.scheduler = lr_scheduler.ReduceLROnPlateau(self.optimizer, mode='min', factor=0.25, patience=2, verbose=True)
+        self.scheduler = lr_scheduler.ReduceLROnPlateau(self.optimizer, mode='min', factor=0.25, patience=2,)
 
         # initialize cuda
         if len(self.args.gpus) > 1:
