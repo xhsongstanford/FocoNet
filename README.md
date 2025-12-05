@@ -1,6 +1,9 @@
 # FocoNet
 
-This is a transformer-based neural network to solve for the focal mechanism by combining the first-motion polarities, S/P amplitude ratios, SNRs from a set of stations.
+This is a transformer-based neural network to solve for the earthquake focal mechanism by combining the first-motion polarities, S/P amplitude ratios, SNRs from a set of stations.
+
+Paper Preprint: 
+https://essopenarchive.org/users/587288/articles/1313564-foconet-transformer-based-focal-mechanism-determination
 
 ## FocoNet structure and the workflow to deterine a focal mechanism:
 
@@ -14,7 +17,7 @@ This is a transformer-based neural network to solve for the focal mechanism by c
   
 * FocoNet_O: the FocoNet model using only the first motion polarities to determine focal mechanisms.
 
-They are only different in dataloaders (data_loader.py), dimensions of the input layer (model.py), and model checkpoints (model/FocoNet_x.pth)
+The three models only differs in dataloaders (data_loader.py), dimensions of the input layers (model.py), and model checkpoints (model/FocoNet_x.pth)
 
 They are trained and tested on the same datasets.
 
@@ -40,6 +43,11 @@ pip3 install scikit-learn
 pip3 install pyrocko
 pip3 install obspy
 ```
+Optional Package:
+
+* PyGMT
+
+PyGMT is used in our example notebooks. To install PyGMT into your environment, see: https://www.pygmt.org/latest/install.html
 
 ## Train FocoNet
 
@@ -173,9 +181,9 @@ The evaluation procedure is tested successful on both linux and macOS systems.
 
     In the near future we will update the output format to strike/dip/rake.
    
-    Currently, users can refer to our jupyter notebook *check_result.ipynb* to convert the PTB axis to focal mechanisms using pyrocko package.
+    Users can refer to our jupyter notebook `FocoNet_Full/check_result.ipynb` to convert the PTB axis to focal mechanisms using pyrocko package and visualize the result.
 
-## Data Structures
+## Dataset Structures
 
 To read the training, test, and evaluation set, use:
 ```
@@ -186,8 +194,7 @@ And then you will load our datasets as python dictionaries.
 
 The keys of every dictionary is the earthquake ids of every earthquake included in this earthquakes (**eid**). For example, in the loaded dictonary of **Evaluation Set 32-STA**, you will get 512 keys.
 
-The values of every dictionary are still dictonaries, but storing the information only from event of selected **eid**. In each earthquake's dictonaries, you will find their:
-
+For more deteiled dataset understanding, see our notebook `FocoNet_Full/check_dataset.ipynb`
 
 
 ## Citation:
