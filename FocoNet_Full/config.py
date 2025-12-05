@@ -1,6 +1,6 @@
 
 TRAIN_DIR = './Train/'
-TRAIN_DATA = TRAIN_DIR + 'Train_set.npy'
+TRAIN_DATA = TRAIN_DIR + 'Train_set_g.npy'
 
 TEST_DIR = './Test/'
 TEST_DATA = TEST_DIR + 'Test_set.npy'
@@ -21,7 +21,7 @@ DEV_DATA = DEV_DIR + 'Atest_24stations.npy'
 # DEV_DATA = DEV_DIR + 'Btest_24stations.npy'
 
 # DEV_DIR = './Dev_Amatrice_Standard/'
-# DEV_DATA = DEV_DIR + 'Amatrice_Standard_32.npy'
+#DEV_DATA = DEV_DIR + 'Amatrice_Standard_32.npy'
 
 # DEV_DIR = './Dev_Amatrice/'
 # DEV_DATA = DEV_DIR + 'Amatrice_ALL_set.npy'

@@ -49,13 +49,6 @@ class FocoNet(nn.Module):
             nn.Linear(128, 32),
         )
 
-        # self.end_res2 = nn.Sequential(
-        #     nn.Linear(32, 128),
-        #     nn.ReLU(),
-        #     nn.LayerNorm(128),
-        #     nn.Linear(128, 32),
-        # )
-
         self.attentionlayer1 = EncoderLayer(d_model=128, num_heads=32, d_ff=1024, dropout=0.1)
         self.attentionlayer2 = EncoderLayer(d_model=128, num_heads=32, d_ff=1024, dropout=0.1)
         self.attentionlayer3 = EncoderLayer(d_model=128, num_heads=32, d_ff=1024, dropout=0.1)
@@ -90,8 +83,6 @@ class FocoNet(nn.Module):
         out = self.attentionlayer6(out)+out
         out = self.attentionlayer7(out)+out
 
-        #out = self.organize(out)
-        
         out = out * sta_mask
         out = torch.sum(out, 1) 
         out = out / sta_num

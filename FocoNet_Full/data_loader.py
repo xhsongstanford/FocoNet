@@ -20,13 +20,11 @@ class WaveFormDataset(Dataset):
         self.sta_mask = np.zeros((self.N, 32, 1))
 
         
-        #start_time = time.time()
         for j in range(self.N):
             eid = self.eids[j]
             if (j+1) % np.floor(self.N/5) == 0:
                 print('loading data %s / %s ...' % (j+1, self.N))
-                #print('time used: %s second' % (time.time() - start_time))
-                #start_time = time.time()
+
             focal = self.data[eid]['focalmech']
             strike = focal[0]
             dip = focal[1]

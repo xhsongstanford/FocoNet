@@ -5,9 +5,6 @@ import numpy as np
 from copy import deepcopy
 import torch
 
-# local imports
-#from impactutils.rupture.tensor import plane_to_tensor
-
 def PTB2Kagan(label, predictions):
 
 	N = predictions.shape[0]
@@ -30,11 +27,6 @@ def PTB2Kagan(label, predictions):
 	the[:, 1] = torch.arccos(torch.clamp(( pp - tt - bb - 1)/2., -0.99999, 0.99999))
 	the[:, 2] = torch.arccos(torch.clamp((-pp - tt + bb - 1)/2., -0.99999, 0.99999))
 	the[:, 3] = torch.arccos(torch.clamp((-pp + tt - bb - 1)/2., -0.99999, 0.99999))
-
-	# the[:, 0] = 1-( pp + tt + bb - 1)/2.
-	# the[:, 1] = 1-( pp - tt - bb - 1)/2.
-	# the[:, 2] = 1-(-pp - tt + bb - 1)/2.
-	# the[:, 3] = 1-(-pp + tt - bb - 1)/2.
 
 	ang = torch.min(the, axis=1).values
 

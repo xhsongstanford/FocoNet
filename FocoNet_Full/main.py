@@ -4,6 +4,7 @@ from data_loader import WaveFormDataset
 import argparse
 import model
 from solver import Solver, Evaluate
+import time
 
 parser = argparse.ArgumentParser()
 parser.add_argument('--gpus', nargs='+', type=int, default=[])
@@ -24,20 +25,20 @@ def main() :
 
     if args.mode == 'Eval':
 
-        # torch.cuda.empty_cache()
-        # torch.cuda.memory_summary(device=None, abbreviated=False)
+        time0 = time.time()
 
         testset = WaveFormDataset('dev')
         FocoNet = model.FocoNet().to(device=device)
         FocoNet.eval()
-        #FocoNet.train(False)
         print ('Evaluating... ◉ ▼ ◉')
         FocoNet.load_state_dict(torch.load(args.modelPath, map_location=device))
-        #FocoNet.eval()
         evaluator = Evaluate(FocoNet, testset, args)
-        eval_loss = evaluator.evalidate()
+        eval_loss = evaluator.evaluate()
         print ("Eval Loss : %.4f" % eval_loss.item())
         print ("Kagan Angle : %.2f" % (eval_loss.item()*180/3.14159265359))
+
+        time_end = time.time()
+        print('runtime in seconds: ', time_end-time0)
 
 
     elif args.mode == 'TrainFromStart':
