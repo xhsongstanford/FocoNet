@@ -4,7 +4,7 @@ This is a transformer-based neural network to solve for the focal mechanism by c
 
 ## FocoNet structure and the workflow to deterine a focal mechanism:
 
-![FOCONETnew](https://github.com/user-attachments/assets/b43ad37e-f878-4d80-9a97-b24d3006dd82)
+<img width="3000" height="1532" alt="FOCONETnew" src="https://github.com/user-attachments/assets/64162fec-0dfc-4add-b57c-7165657086e4" />
 
 ## FocoNet Versions:
 
@@ -47,7 +47,7 @@ Please note that the training procedure is only tested successful on a linux (ub
 
 1. Download the Training set and Test set:
 
-    https://zenodo.org/records/16938136
+    https://zenodo.org/records/17822343
    
 3. Copy the Training and Test sets to the following paths:
 
@@ -85,7 +85,7 @@ The evaluation procedure is tested successful on both linux and macOS systems.
 
 2. Download the Evaluation sets:
 
-    https://zenodo.org/records/16938136
+    https://zenodo.org/records/17822343
 
 3. Put the Evaluation sets under the following path, and here we list all of our Evaluation sets in our paper:
 
@@ -174,6 +174,21 @@ The evaluation procedure is tested successful on both linux and macOS systems.
     In the near future we will update the output format to strike/dip/rake.
    
     Currently, users can refer to our jupyter notebook *check_result.ipynb* to convert the PTB axis to focal mechanisms using pyrocko package.
+
+## Data Structures
+
+To read the training, test, and evaluation set, use:
+```
+import numpy as np
+np.load('Dataset_Name', allow_pickle=True).item()
+```
+And then you will load our datasets as python dictionaries.
+
+The keys of every dictionary is the earthquake ids of every earthquake included in this earthquakes (**eid**). For example, in the loaded dictonary of **Evaluation Set 32-STA**, you will get 512 keys.
+
+The values of every dictionary are still dictonaries, but storing the information only from event of selected **eid**. In each earthquake's dictonaries, you will find their:
+
+
 
 ## Citation:
 Song, X., Meier, M., Ellsworth, W. L., & Beroza, G. C., FocoNet: transformer-based focal-mechanism determination, JGR Machine Learning in review, 2025
