@@ -1,4 +1,4 @@
-# FocoNet
+# FocoNet (◉▼◉ ﾐ )Э
 
 This is a transformer-based neural network to solve for the earthquake focal mechanism by combining the first-motion polarities, S/P amplitude ratios, SNRs from a set of stations.
 
@@ -8,6 +8,8 @@ https://essopenarchive.org/users/587288/articles/1313564-foconet-transformer-bas
 ## FocoNet structure and the workflow to deterine a focal mechanism
 
 <img width="3000" height="1532" alt="FOCONETnew" src="https://github.com/user-attachments/assets/64162fec-0dfc-4add-b57c-7165657086e4" />
+
+* (Meier et al., 2025): Meier, M., Lanza, F., Martínez‐Garzón, P., & Chiaraluce, L. (2025). Insights into Extensional Tectonics from a Large Deep Learning Focal Mechanism Catalog. Bulletin of the Seismological Society of America. https://doi.org/10.1785/0120250103
 
 ## FocoNet Versions
 
@@ -49,7 +51,7 @@ Optional Package:
 
 PyGMT is used in our example notebooks. To install PyGMT into your environment, see: https://www.pygmt.org/latest/install.html
 
-## Train FocoNet
+## Train FocoNet (◉▼◉ ﾐ )Э
 
 Please note that the training procedure is only tested successful on a linux (ubuntu 24.0) system
 
@@ -80,7 +82,7 @@ Please note that the training procedure is only tested successful on a linux (ub
     python3 main.py [Optional] --mode='TrainFromStart'
     ```
 
-## Evaluate FocoNet (Make Predictions)
+## Evaluate FocoNet (Make Predictions) ◉ ▼ ◉
 
 The evaluation procedure is tested successful on both linux and macOS systems.
 
@@ -197,8 +199,6 @@ The keys of every dictionary is the earthquake ids of every earthquake included 
 For more deteiled dataset understanding, see our notebook `FocoNet_Full/check_dataset.ipynb`
 
 
-## Citation:
+## Citation
 Song, X., Meier, M., Ellsworth, W. L., & Beroza, G. C., FocoNet: transformer-based focal-mechanism determination, JGR Machine Learning in review, 2025
 
-## References:
-Meier, M.-A., Lanza, F., and Martinez-Garzon, P., A deep catalogue of 56k focal mechanisms for the 2016 Amatrice, Italy earthquake sequence, BSSA in review, 2025
