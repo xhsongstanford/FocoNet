@@ -181,7 +181,7 @@ The evaluation procedure is tested successful on both linux and macOS systems.
 
     In the near future we will update the output format to strike/dip/rake.
    
-    Users can refer to our jupyter notebook `FocoNet_Full/check_result.ipynb` to convert the PTB axis to focal mechanisms using pyrocko package and visualize the result.
+    Users can refer to our jupyter notebook `FocoNet_Full/check_result.ipynb` to convert the PTB axis to focal mechanisms and visualize the result.
 
 ## Dataset Structures
 
