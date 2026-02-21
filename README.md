@@ -2,8 +2,11 @@
 
 This is a transformer-based neural network to solve for the earthquake focal mechanism by combining the first-motion polarities, S/P amplitude ratios, SNRs from a set of stations.
 
-Paper Preprint: 
-https://essopenarchive.org/users/587288/articles/1313564-foconet-transformer-based-focal-mechanism-determination
+## Citation
+Song, X., Meier, M., Ellsworth, W. L., & Beroza, G. C. (2026), FocoNet: transformer-based focal-mechanism determination, JGR Machine Learning in review.
+
+(Preprint: https://essopenarchive.org/users/587288/articles/1313564-foconet-transformer-based-focal-mechanism-determination)
+
 
 ## FocoNet structure and the workflow to deterine a focal mechanism
 
@@ -199,6 +202,4 @@ The keys of every dictionary is the earthquake ids of every earthquake included 
 For more deteiled dataset understanding, see our notebook `FocoNet_Full/check_dataset.ipynb`
 
 
-## Citation
-Song, X., Meier, M., Ellsworth, W. L., & Beroza, G. C., FocoNet: transformer-based focal-mechanism determination, JGR Machine Learning in review, 2025
 
